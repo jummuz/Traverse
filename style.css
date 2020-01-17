@@ -1,0 +1,9 @@
+.flex-horiz {
+  display: flex;
+  flex-direction: row;
+}
+
+.pane {
+  padding: 5px;
+  width: 33%;
+}
