@@ -7,20 +7,63 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class="flex-horiz">
-      <div id="log" class="pane">
-        <div>You create a repl.</div>
-        <div>It sucks.</div>
+    <div id="container" class="flex-vert">
+      <div class="flex-horiz stack">
+        <div id="logDisp" class="pane">
+        </div>
+        <div id="actions" class="pane">
+          <button>Do something</button>
+          <button>Do something else</button>
+        </div>
+        <div id="resources" class="pane">
+          <div>Something x1</div>
+          <div>Something else x2</div>
+        </div>
       </div>
-      <div id="actions" class="pane">
-        <button>Do something</button>
-        <button>Do something else</button>
-      </div>
-      <div id="resources" class="pane">
-        <div>Something x1</div>
-        <div>Something else x2</div>
+      <div>
+        <div class="stack">
+          <table id="map" cellspacing="0" cellpadding="0">
+            <tr>
+              <td></td>
+              <td></td>
+              <td>"</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>"</td>
+              <td>"</td>
+              <td>"</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>"</td>
+              <td>"</td>
+              <td>@</td>
+              <td>"</td>
+              <td>;</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>"</td>
+              <td>"</td>
+              <td>;</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>;</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
+    
+    <script src="js/log.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
