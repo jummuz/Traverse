@@ -11,11 +11,14 @@ function drawMap(chars, xPos, yPos, size) {
     for(let x = 0; x < size; x++) {
       map.children[y].appendChild(document.createElement("td"))
 
-      // Draw tile if it is on the map
-      if(chars[yTile] && chars[yTile][xTile]) {
-        map.children[y].children[x].textContent = chars[yTile][xTile];
-      } else {
-        map.children[y].children[x].textContent = "."
+      // Draw nifty diamond map
+      if(Math.abs(xPos - xTile) + Math.abs(yPos - yTile) <= Math.floor(size / 2)) {
+        // Draw tile if it is on the map
+        if(chars[yTile] && chars[yTile][xTile]) {
+          map.children[y].children[x].textContent = chars[yTile][xTile];
+        } else {
+          map.children[y].children[x].textContent = "."
+        }
       }
         
       xTile++

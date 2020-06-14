@@ -1,4 +1,4 @@
-function generateWorld(width, height, elevation, smoothing) {
+function generateHeightMap(width, height, elevation, smoothing) {
   // Initial random values
   let world = []
   for(let y = 0; y < height; y++) {
