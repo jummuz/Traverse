@@ -13,8 +13,12 @@ function drawMap(chars, xPos, yPos, size) {
 
       // Draw nifty diamond map
       if(Math.abs(xPos - xTile) + Math.abs(yPos - yTile) <= Math.floor(size / 2)) {
+        // Draw player
+        if(xTile == xPos && yTile == yPos) {
+          map.children[y].children[x].textContent = "@"
+        }
         // Draw tile if it is on the map
-        if(chars[yTile] && chars[yTile][xTile] != undefined)
+        else if(chars[yTile] && chars[yTile][xTile] != undefined)
           map.children[y].children[x].textContent = chars[yTile][xTile];
         else
           map.children[y].children[x].textContent = "."
